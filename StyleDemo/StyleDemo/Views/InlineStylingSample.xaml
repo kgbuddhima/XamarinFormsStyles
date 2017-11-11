@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleDemo.Views.InlineStylingSample">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="10" RowSpacing="10"  Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="*"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+
+                <RowDefinition  Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Enter the Password..."
+                    TextColor="#603F82" FontSize="Large" HorizontalOptions="FillAndExpand" 
+                    HorizontalTextAlignment="Center"/>
+            <Entry Grid.Row="2"  Grid.Column="1"  Grid.ColumnSpan="3"  x:Name="txt1" Placeholder="******"
+                   TextColor="#7C64B8" PlaceholderColor="Silver" HorizontalTextAlignment="Center"
+                   FontAttributes="Bold" FontSize="24" IsPassword="True" Keyboard="Numeric"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="1" x:Name="btn1"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="2" x:Name="btn2"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="3" x:Name="btn3"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="4" x:Name="btn4"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="5"  x:Name="btn5"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="6"  x:Name="btn6"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="7"  x:Name="btn7"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="5" Grid.Column="2" Text="8"  x:Name="btn8"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="5" Grid.Column="3" Text="9"  x:Name="btn9"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button Grid.Row="6" Grid.Column="2" Text="0"  x:Name="btn0"
+                   BackgroundColor="#E1DDFF" TextColor="#6A309C" FontSize="Medium" FontAttributes="Bold" 
+                   HeightRequest="75" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleDemo.Views.PageLevelStyles">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="buttonColorCalculator">#E1DDFF</Color>
+            <Color x:Key="textColorButtonCalc">#6A309C</Color>
+            <Color x:Key="textColorHeading">#603F82</Color>
+            <Color x:Key="textColorEntry">#7C64B8</Color>
+            <Color x:Key="textColorPlaceHolder">Silver</Color>
+
+            <!--VisualElement-->
+            <Style x:Key="buttonStyleCalculator" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource buttonColorCalculator}" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="TextColor" Value="{DynamicResource textColorButtonCalc}" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HeightRequest" Value="75" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <Style x:Key="labelStyleHeading" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource textColorHeading}" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="EntryStyleVerificationCode" TargetType="Entry">
+                <Setter Property="TextColor" Value="{DynamicResource textColorEntry}" />
+                <Setter Property="PlaceholderColor" Value="{DynamicResource textColorPlaceHolder}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="IsPassword" Value="true" />
+                <Setter Property="Keyboard" Value="Numeric" />
+                <Setter Property="Placeholder" Value="*" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid ColumnSpacing="10" RowSpacing="10"  Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="*"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+                <RowDefinition  Height="Auto"/>
+
+                <RowDefinition  Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Enter the Password..." Style="{StaticResource labelStyleHeading}"/>
+            <Entry Grid.Row="2"  Grid.Column="1"  Grid.ColumnSpan="3"  x:Name="txt1" Placeholder="******"  Style="{StaticResource EntryStyleVerificationCode}"/>
+            <Button Grid.Row="3" Grid.Column="1" Text="1" x:Name="btn1" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="3" Grid.Column="2" Text="2" x:Name="btn2" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="3" Grid.Column="3" Text="3" x:Name="btn3" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="4" Grid.Column="1" Text="4" x:Name="btn4" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="4" Grid.Column="2" Text="5" x:Name="btn5" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="4" Grid.Column="3" Text="6" x:Name="btn6" Style="{StaticResource buttonStyleCalculator}"/>
+            <Button Grid.Row="5" Grid.Column="1" Text="7" x:Name="btn7" Style="{DynamicResource buttonStyleCalculator}"/>
+            <Button Grid.Row="5" Grid.Column="2" Text="8" x:Name="btn8" Style="{DynamicResource buttonStyleCalculator}"/>
+            <Button Grid.Row="5" Grid.Column="3" Text="9" x:Name="btn9" Style="{DynamicResource buttonStyleCalculator}"
+                   Clicked="btn9_Clicked" />
+            <Button Grid.Row="6" Grid.Column="2" Text="0" x:Name="btn0" Style="{DynamicResource buttonStyleCalculator}"
+                  Clicked="btn0_Clicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

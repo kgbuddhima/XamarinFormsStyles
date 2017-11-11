@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StyleDemo"
+             x:Class="StyleDemo.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Button x:Name="btnNoStylePage" Text="No Styles" Clicked="btnNoStylePage_Clicked"></Button>
+            <Button x:Name="btnInlineStylePage" Text="Inline Styles"  Clicked="btnInlineStylePage_Clicked"></Button>
+            <Button x:Name="btnStylesInPage" Text="Page Level Styles"  Clicked="btnStylesInPage_Clicked"></Button>
+            <Button x:Name="btnImplicitStylePage" Text="Implicit Styles"  Clicked="btnImplicitStylePage_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
